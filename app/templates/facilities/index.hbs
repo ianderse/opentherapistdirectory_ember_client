@@ -1,7 +1,10 @@
 <h1>All Facilities</h1>
 
 <div class="facility">
-{{#each facility in model}}
-  {{facility.name}}
+{{#each firstFacilities}}
+  {{#link-to 'facilities.show' this class="list-group-item"}}
+    <h4 class="list-group-item-heading">{{name}}</h4>
+    <p class="list-group-item-text">{{address}}</p>
+  {{/link-to}}
 {{/each}}
 </div>
