@@ -2,7 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function () {
-    return this.store.find('facility');
-  }
+    var currentData = this.store.all('facility');
+    this.store.find('facility');
 
+    return currentData;
+  }
 });
